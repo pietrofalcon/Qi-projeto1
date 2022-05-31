@@ -1,0 +1,15 @@
+{
+    "name": "guilherme/projeto_php",
+    "autoload": {
+        "psr-4": {
+            "APP\\": "src/"
+        },    
+        "files": [
+            "Config.php"
+          ]
+    },
+    "require": {
+        "coffeecode/uploader": "^2.0"
+    }
+    
+}

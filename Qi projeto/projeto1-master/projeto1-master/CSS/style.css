@@ -1,0 +1,301 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+
+
+    
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+
+}
+.sidebar{
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    background: rgb(219, 196, 162);
+    top: 0;
+    left: 0;
+    padding:  6px 10px;
+    transition: all 0.5s ease;
+    
+}
+.sidebar.active{
+    width: 275px;
+    
+}
+.sidebar .logo_content .logo{
+    display: flex;
+    height: 50px;
+    width:100% ;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+.logo_content .logo .img_logo{
+    font-size: 28px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 40%;
+}
+.logo_content .logo .logo_name{
+    font-size: 30px;
+}
+.sidebar #btn{
+    position: absolute;
+    font-size: 35px;
+    left: 30%;
+    height: 50px;
+    width: 50px;
+    top: 6px;
+    line-height: 55px;
+    
+  
+}
+.sidebar.active #btn{
+    left: 85%;
+
+}
+.sidebar .nav_list{
+    margin-top: 20px;
+    font-size: 20px;
+    left: 85%;
+    padding-left: 5px;
+    text-align: center;
+}
+.sidebar ul li{
+    height: 50px;
+    width: 90%;
+    list-style: none;
+    position: relative;
+    margin: 20px 5px;
+    line-height: 40px;
+    padding-left: 0;
+}
+.sidebar ul li .negocio{
+    position: absolute;
+    height: 40px;
+    width: 122px;
+    background:white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%, -50%);
+    border-radius:  6px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+.sidebar.active ul li .negocio{
+    display: none;
+}
+.sidebar ul li:hover .negocio{
+    top: 13%;
+    transition: all 0.5s ease;
+    opacity: 1;
+
+}
+.sidebar ul li a{
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    transition: all 0.4s;
+    border-radius: 12px;
+    white-space: nowrap;
+    
+}
+.sidebar ul li a:hover{
+    color:white;
+    background-color: rgb(204,162,102);
+
+
+}
+.sidebar ul li input{
+    height: 100%;
+    width: 50%;
+    position:absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 0;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+    font-size: 18px; 
+
+}
+.sidebar.active ul li input{
+    width: 100%;
+}
+.sidebar ul li .bx-search-alt-2{
+    position: absolute;
+    z-index: 99;
+    font-size: 25px;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.sidebar ul li .bx-search-alt-2:hover{
+    background: white;
+    color:rgb(204,162,102);
+
+}
+
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .profile_content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 25px;
+    width: 100%;
+}
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 80px;
+    background: rgba(204, 162, 102, 0.521);
+
+}
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.profile .profile_details img{
+    height: 25%;
+    width: 25%;
+    border-radius: 50px;
+    opacity: 1;
+    pointer-events: none;
+    white-space: nowrap;
+    object-fit: cover;
+}
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.profile .profile_details .name_job{
+    margin-left: 10px;
+}
+.profile .profile_details .name_people{
+    font-size: 25px;
+    font-weight: 400;
+}
+.profile .profile_details .job{
+    font-size: 20px;
+}
+.profile .bx-log-out{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+.sidebar.active .bx-log-out{
+    left: 50%;
+}
+#artesanatos{
+    background: rgba(199, 177, 143, 0.5);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 5vw;
+    border-radius: 20px;
+    font-size: 28px;
+}
+.img-exemplo{
+    background: rgb(230, 219, 219);
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: o 1.5%;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    height: 350px;
+    width: 20%;
+    transition: 1s;
+    margin-left: 4%;
+}
+
+
+
+
+
+
+.teste{
+    width: 75%;
+    height: 75%;
+}
+
+
+
+
+
+
+.bxs-home-smile{
+    padding-left: 8px;
+}
+.bx-log-in{
+    padding-left: 4px;
+}
+.bxs-category{
+    padding-left: 8px;
+}
+.bxs-group{
+    padding-left: 12px;
+}
+.bxs-user{
+    padding-left: 8px ;
+}
+
+
+
+
+.produto{
+    background: rgb(219, 196, 162);
+    width: auto;
+    margin-left: 500px;
+    height: auto;
+    padding: 10px;
+}
